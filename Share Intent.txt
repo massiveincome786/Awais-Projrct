@@ -1,0 +1,18 @@
+public static final String INFO = "info";
+
+Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, INFO);
+        intent.setType("text/plain");
+        Intent chooser = Intent.createChooser(intent,"Share");
+        startActivity(chooser);
+
+
+<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:id="@+id/btnshare"
+        android:text="Share"
+        android:onClick="btnshareclick"/>
